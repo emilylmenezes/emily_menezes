@@ -5,10 +5,10 @@ navLinks.forEach(link => {
   link.addEventListener('click', () => {
     const targetId = link.getAttribute('data-section');
 
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
+    sections.forEach(section => section.classList.remove('active'));
+    navLinks.forEach(nav => nav.classList.remove('active'));
 
     document.getElementById(targetId).classList.add('active');
+    link.classList.add('active');
   });
 });
